@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="login-container">
+    <div class="image-container">
+        <img src="/images/login-image.png" alt="Image">
+    </div>
+    <div class="login-form">
+        <h2>Create an Account</h2>
+        <h5 class="form-subtitle">Enter your details below</h5>
+        <form action="/Home/RegisterUser" method="post" class="form">
+            <input class="form-input" placeholder="Name" type="text" id="username" name="username" required>
+
+            <input class="form-input" placeholder="Email" type="email" id="email" name="email" required>
+
+            <input class="form-input" placeholder="Password" type="password" id="password" name="password" required>
+
+            <button class="form-button" type="submit">Create an Account</button>
+            <p class="form-sign-up-text">Already have an account? <a href="/Home/Login">Sign Up</a></p>
+        </form>
+    </div>
+
+</div>

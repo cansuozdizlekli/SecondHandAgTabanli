@@ -1,0 +1,72 @@
+﻿<Properties StartupConfiguration="{AF35A31F-543A-43F5-B256-4A2154846CE2}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SecondHandMVC/Views/Home/AdvertisementDetail.cshtml">
+    <Files>
+      <File FileName="SecondHandMVC/Controllers/HomeController.cs" />
+      <File FileName="SecondHandMVC/Views/Home/Register.cshtml" />
+      <File FileName="SecondHandMVC/Views/Home/Login.cshtml" />
+      <File FileName="SecondHandMVC/Views/Home/Index.cshtml" />
+      <File FileName="SecondHandMVC/Views/Home/Advertisements.cshtml" />
+      <File FileName="SecondHandMVC/Helper/PasswordHasher.cs" />
+      <File FileName="SecondHandMVC/Models/User.cs" />
+      <File FileName="SecondHandMVC/Models/Advertisement.cs" />
+      <File FileName="SecondHandMVC/wwwroot/js/site.js" />
+      <File FileName="SecondHandMVC/Views/Shared/Error.cshtml" />
+      <File FileName="SecondHandMVC/Views/Shared/_Layout.cshtml" />
+      <File FileName="SecondHandMVC/Views/Shared/_Layout.cshtml.css" />
+      <File FileName="SecondHandMVC/appsettings.json" />
+      <File FileName="SecondHandMVC/Program.cs" />
+      <File FileName="SecondHandMVC/Properties/launchSettings.json" />
+      <File FileName="SecondHandMVC/Views/_ViewStart.cshtml" />
+      <File FileName="SecondHandMVC/Views/_ViewImports.cshtml" />
+      <File FileName="SecondHandMVC/Views/Shared/Layout2.cshtml" />
+      <File FileName="SecondHandMVC/wwwroot/css/advertisements.css" />
+      <File FileName="SecondHandMVC/Views/Home/AddAdvertisement.cshtml" />
+      <File FileName="SecondHandMVC/GlobalUsing.cs" />
+      <File FileName="SecondHandMVC/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="SecondHandMVC/wwwroot/css/addadvertisement.css" />
+      <File FileName="SecondHandMVC/Views/Shared/AddAdvertisementLayout.cshtml" />
+      <File FileName="SecondHandMVC/wwwroot/css/site.css" />
+      <File FileName="SecondHandMVC/wwwroot/js/AddAdvertisement.js" />
+      <File FileName="SecondHandMVC/Data/ApplicationDbContext.cs" />
+      <File FileName="SecondHandMVC/Controllers/AccountController.cs" />
+      <File FileName="SecondHandMVC/wwwroot/images/file_name" />
+      <File FileName="SecondHandMVC/Views/Home/AdvertisementDetail.cshtml" Line="124" Column="1" />
+      <File FileName="SecondHandMVC/Models/ErrorViewModel.cs" />
+      <File FileName="SecondHandMVC/Helper/JWTTokenHelper.cs" />
+      <File FileName="SecondHandMVC/Views/Home/MyAdvertisements.cshtml" />
+      <File FileName="SecondHandMVC/Views/Home/MyPurchases.cshtml" />
+      <File FileName="SecondHandMVC/Views/Shared/Layout3.cshtml" />
+      <File FileName="SecondHandMVC/appsettings.Development.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SecondHandMVC" expanded="True">
+            <Node name="SecondHandMVC" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Helper" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="AdvertisementDetail.cshtml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SecondHandMVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

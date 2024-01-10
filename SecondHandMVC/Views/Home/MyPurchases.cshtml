@@ -1,0 +1,91 @@
+﻿
+@model IEnumerable<Advertisement>
+
+
+@{
+    Layout = "~/Views/Shared/Layout2.cshtml";
+}
+
+
+
+<h3>My Purchases</h3>
+<section>
+    <div class="container">
+        <ul>
+            @foreach (var ad in Model)
+            {
+                <div class="product-card">
+                    <img class="product-image" src="data:image/png;base64,@ad.Image" alt="Ürün 1">
+                    <button id="product-button" class="add-to-cart"><img src="/images/add-to-card-icon.png" alt="Add to Cart">Add to Cart</button>
+                    <div class="product-title">@ad.Title</div>
+                    <div class="product-price">$@ad.Price</div>
+                    <div class="product-seller">@ad.SellerUserID</div>
+                    <div class="product-buyer">@ad.BuyerUserID</div>
+                </div>
+            }
+        </ul>
+    </div>
+
+</section>
+
+<script>var tokenString = getCookie("tokenString");
+
+    if (tokenString) {
+        console.log('Token String from Cookie:', tokenString);
+    } else {
+        console.log('Token String not found in Cookie.');
+    }
+
+    var decodedToken = atob(tokenString.split('.')[1]); // Token'ı çöz
+    console.log("decoded token", decodedToken);
+
+    var userInfo = JSON.parse(decodedToken); // JSON formatına çevir
+    console.log("user info", userInfo);
+    var userId = userInfo.unique_name; // Kullanıcı kimliğini al
+    console.log("User ID:", userId);
+
+    var productButtons = document.querySelectorAll(".add-to-cart");
+    var productCards = document.querySelectorAll(".product-card");
+    var productSellers = document.querySelectorAll(".product-seller");
+    var productBuyers = document.querySelectorAll(".product-buyer");
+
+
+    productBuyers.forEach(function (buyer, index) {
+        var buyer = buyer.innerText;
+        productBuyers[index].style.display = "none";
+        productSellers[index].style.display = "none";
+        console.log("buyer neymis", buyer);
+        if (buyer != userId) {
+            productCards[index].style.display = "none";
+        } else {
+            productButtons[index].innerText = "Purchased Item";
+            productButtons[index].style.backgroundColor = "black";
+
+        }
+    });
+
+    // Cookie'den belirli bir anahtarı okuma fonksiyonu
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var cookies = document.cookie.split(';');
+
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            while (cookie.charAt(0) == ' ') {
+                cookie = cookie.substring(1, cookie.length);
+            }
+            if (cookie.indexOf(nameEQ) == 0) {
+                return cookie.substring(nameEQ.length, cookie.length);
+            }
+        }
+        return null;
+    }
+
+    document.getElementById("logoutButton").addEventListener("click", function () {
+        // Cookie'yi silmek için JavaScript kullanabilirsiniz
+        document.cookie = "tokenString=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+        // Sayfayı yeniden yönlendirme (örneğin, login sayfasına)
+        window.location.href = "/Home/Login";
+    });
+</script>

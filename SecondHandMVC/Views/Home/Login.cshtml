@@ -1,0 +1,30 @@
+﻿
+@if(ViewBag.Message != null) {
+    <script>
+        window.addEventListener("load", (event) => {
+            alert('@ViewBag.Message');
+        })
+    </script>
+}
+
+
+
+<div class="login-container">
+    <div class="image-container">
+        <img src="/images/login-image.png" alt="Image">
+    </div>
+    <div class="login-form">
+        <h2>Log in to Second Hand</h2>
+        <h5 class="form-subtitle">Enter your details below</h5>
+        <form action="/Home/LoginUser" method="post" class="form">
+
+            <input class="form-input" placeholder="Email" type="email" id="email" name="email" required>
+
+            <input class="form-input" placeholder="Password" type="password" id="password" name="password" required>
+
+            <button class="form-button" type="submit">Log in </button>
+            <p class="form-sign-up-text">Don't you have an account? <a href="/Home/Register">Register</a></p>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,68 @@
+﻿@page
+@{
+    Layout = "~/Views/Shared/AddAdvertisementLayout.cshtml";
+
+}
+
+<section>
+    <h3>Add Product Page</h3>
+    <div class="container">
+
+        <form action="/Home/AddAdvertisementToMysql" method="post" enctype="multipart/form-data">
+            <div class="image-side">
+                <div class="file-input-container">
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <label class="file-input-label" for="image">Choose a Photo</label>
+                    <img id="selected-image" src="#" alt="Selected Image">
+                </div>
+            </div>
+            <div class="attribute-side">
+                <label for="title">Title:</label>
+                <input class="form-input" type="text" id="title" name="title" required>
+
+                <label for="description">Description:</label>
+                <input class="form-input" id="text" name="description" required>
+
+                <label for="tags">Tags (comma separated):</label>
+                <input class="form-input" type="text" id="tags" name="tags">
+
+                <label for="price">Price:</label>
+                <input class="form-input" type="number" id="price" name="price" required>
+                <button class="form-button" type="submit">Add Product</button>
+            </div>
+
+        </form>
+
+
+    </div>
+</section>
+
+<script>
+    document.getElementById('image').addEventListener('change', function () {
+        var input = this;
+        var image = document.getElementById('selected-image');
+        var label = document.querySelector('.file-input-label');
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                image.src = e.target.result;
+                image.style.display = 'block';
+                label.style.display = 'none'; // Gösterilen fotoğraf varsa, label'ı gizle
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    });
+
+    document.getElementById("logoutButton").addEventListener("click", function () {
+        // Cookie'yi silmek için JavaScript kullanabilirsiniz
+        document.cookie = "tokenString=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+        // Sayfayı yeniden yönlendirme (örneğin, login sayfasına)
+        window.location.href = "/Home/Login";
+    });
+
+
+</script>
